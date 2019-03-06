@@ -1,0 +1,44 @@
+5 steps to ceate a spring project
+1. create a bean class
+2. create a xml file
+3. create a client class
+4. add jar files
+5. run 
+
+
+class employee
+{
+String empID;
+String empName;
+String empAge;
+char empGender;
+}
+
+Employee emp=new Employee();		// traditional way of creating objects in java
+emp.id=20;
+emp.empName="yash";
+emp.empAge=22;
+emp.empGender='M';
+
+Spring core is based on inversion of controls (IOC)
+You dont create objects.
+Objects shall be configured in an xml file by the developer.
+Spring container is responsible for creating the java objects by parsing an xml file.
+// Advantage is xml file is not the part of source code so we can anytime manupulate the xml file and the objects will be created.
+
+Creating sample code for spring named as SpringCoreDemo......
+
+1.	create a new java project in sts....
+2.	create a class with name SpringCoreDemo
+3. 	create a class with name client
+4. 	build path, add jar files.....
+
+1st bean container is xmlbeanfactory
+In main class
+create an object of Resource by using ClassPathResource("xml file name")
+create an object of spring container by using 
+BeanFactory factory=new XmlBeanFactory(resource object)
+
+2nd bean container is ApplicationContext
+ApplicationContext context=new ClassPathXmlApplicationContext("xml file name")
+context.getbean(name);
